@@ -3,6 +3,8 @@ import "./App.css";
 import axios from "axios";
 import { API_KEY } from "./constants";
 
+import Apod from './Apod'
+
 
 function App() {
   const [info, setInfo] = useState([])
@@ -18,10 +20,9 @@ function App() {
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+
+      <Apod title={info.title} date={info.date} copyright={info.copyright} hdurl={info.hdurl} explanation={info.explanation} />
+      
     </div>
   );
 }
