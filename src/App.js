@@ -5,11 +5,14 @@ import { API_KEY } from "./constants";
 
 
 function App() {
+  const [info, setInfo] = useState([])
 
   useEffect(() => {
     axios.get(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
     .then(res => {
-      console.log(res.data)
+      setInfo(res.data)
+    }) .catch(err => {
+      console.error(err)
     })
   }, [])
 
