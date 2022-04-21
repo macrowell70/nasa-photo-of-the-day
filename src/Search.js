@@ -4,7 +4,7 @@ const Search = (props) => {
   
 
     return (
-       <form><input type="search" placeholder="YYYY-MM-DD" /></form>
+       <form><input type="search" placeholder="YYYY-MM-DD"/></form>
     )
 
 }
