@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Search from './Search'
-import styledComponents from "styled-components";
 import styled from "styled-components";
 
 
@@ -44,7 +43,7 @@ const StyledApod = styled.div`
 
     img {
         height: 60vh;
-        width: 85%;
+        width: 83%;
         object-fit: contain
 
     }
@@ -65,8 +64,10 @@ const Apod = (props) => {
         <StyledApod className='container'>
             <h1>{title} {date}</h1>
             <div className='img-container'>
+                {/* button will show previous day's photo*/}
                 <button className='arrow left'></button>
                 <img src={hdurl} alt='photo of the day' className='image' />
+                {/**button will show next day's photo */}
                 <button className='arrow right'></button>
             </div>
             <p className='explanation'>{explanation}</p>
