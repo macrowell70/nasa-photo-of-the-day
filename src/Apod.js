@@ -13,13 +13,17 @@ const StyledApod = styled.div`
     flex-direction: column;
     font-family: sans-serif;
     text-shadow: 1px 1px 2px black;
-    
-
-
 
     img {
         height: 60vh;
+        width: 80%;
+        object-fit: contain
 
+    }
+    p {
+        border: 4px solid #8A473D;
+        background-color: #3E818A;
+        padding: 20px;
     }
 `;
 
@@ -32,7 +36,9 @@ const Apod = (props) => {
         <StyledApod className='container'>
             <h1>{title} {date}</h1>
             <h2>By: {copyright}</h2>
-            <img src={hdurl} alt='photo of the day' className='image' />
+            <div className='img-container'>
+                <img src={hdurl} alt='photo of the day' className='image' />
+            </div>
             <p>{explanation}</p>
             <Search />
         </StyledApod>
